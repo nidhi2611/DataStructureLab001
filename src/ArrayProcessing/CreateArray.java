@@ -5,12 +5,15 @@ import java.util.Scanner;
 public class CreateArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("enter the size of the array");
         int sizeOfArray = sc.nextInt();//entering size of the array
         int[] array = new int[sizeOfArray];//creating a array
         CreateArray createArray = new CreateArray();//object creation
         createArray.enterElementsInArray(array, sizeOfArray, sc);//function for creating array
+        System.out.println("Printing array created by scanner class");
         createArray.printArray(array);//function fr printing array made by scanner class
         createArray.calculateSumAndAverage(array);//calculating sum average array
+        System.out.println("printing array created by static initialization");
         createArray.createArrayUsingStatic(array);//creating array using static initialization
         createArray.printArray(array);//printing new array
     }
