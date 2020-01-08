@@ -9,6 +9,7 @@ public class CreateArray {
         int[] array = new int[sizeOfArray];
         CreateArray createArray = new CreateArray();
         createArray.enterElementsInArray(array, sizeOfArray, sc);
+        createArray.printArray(array);
         createArray.calculateSumAndAverage(array);
     }
 
@@ -16,6 +17,14 @@ public class CreateArray {
         for (int i = 0; i < k; i++) {
             arr[i] = scanner.nextInt();
         }
+    }
+
+    public void printArray(int arr[]) {
+        System.out.println("[");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+        }
+        System.out.println("]");
     }
 
     public void calculateSumAndAverage(int arr[]) {
