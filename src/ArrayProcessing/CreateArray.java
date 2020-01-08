@@ -16,6 +16,11 @@ public class CreateArray {
         System.out.println("printing array created by static initialization");
         createArray.createArrayUsingStatic(array);//creating array using static initialization
         createArray.printArray(array);//printing new array
+        System.out.println("Creating element by command line");
+        for (int i = 0; i < args.length && i < array.length; i++) {
+            array[i] = Integer.parseInt(args[i]);
+        }
+        createArray.printArray(array);
     }
 
     public void enterElementsInArray(int arr[], int k, Scanner scanner) {//enetring element using scanner
@@ -55,4 +60,5 @@ public class CreateArray {
         arr[9] = 10;
 
     }
+
 }
